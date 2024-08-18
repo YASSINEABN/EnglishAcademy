@@ -1,0 +1,141 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.sub-header {
+  font-size: 15px;
+  margin-top: -20px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  perspective: 1000px;
+  width: 300px;
+  height: 460px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.card-front {
+  background: white;
+}
+
+.card-back {
+  background: #f8f9fa;
+  transform: rotateY(180deg);
+}
+
+.card img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.card-back a {
+  margin-left: 90px;
+}
+
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+      max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+      font-size: 20px;
+  }
+
+  .sub-header {
+      font-size: 12px;
+  }
+
+  .card {
+      width: 100%;
+      max-width: 300px;
+      height: 400px;
+  }
+
+  .card-body {
+      padding: 10px;
+  }
+
+  .card-title {
+      font-size: 1rem;
+  }
+
+  .btn {
+      padding: 8px 16px;
+  }
+
+  .card-back a {
+      margin-left: 0;
+  }
+
+}

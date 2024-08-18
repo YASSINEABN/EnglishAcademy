@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full screen height */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+}
+
+.container {
+    flex: 1;
+    margin: 20px;
+    border-radius: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    height: 80%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.title-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.animation-container {
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.animation-text {
+    position: relative;
+    font-size: 1em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 24ch;
+}
+
+.marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgba(240, 234, 234, 0.507), rgba(255, 255, 255, 0.408));
+    animation: marker 2s forwards;
+}
+
+.line1 {
+    animation: typing1 3s steps(24), blink 0.75s step-end infinite;
+}
+
+.line2, .line3, .line4 {
+    visibility: hidden;
+    animation: blink 0.75s step-end infinite;
+}
+
+.line2 {
+    animation: typing2 4s steps(24) 3s forwards, blink 0.75s step-end infinite 3s;
+}
+
+.line3 {
+    animation: typing3 4s steps(24) 7s forwards, blink 0.75s step-end infinite 7s;
+}
+
+.line4 {
+    animation: typing4 5s steps(28) 11s forwards, blink 0.75s step-end infinite 11s;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #333;
+    width: 100%;
+    margin: 10px 0;
+}
+
+@keyframes typing1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24ch;
+    }
+}
+
+@keyframes typing2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24ch;
+        visibility: visible;
+    }
+}
+
+@keyframes typing3 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24ch;
+        visibility: visible;
+    }
+}
+
+@keyframes typing4 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 28ch;
+        visibility: visible;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes marker {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack the text below the image */
+        align-items: center;
+    }
+
+    .container, .animation-container {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .animation-text {
+        font-size: 1em;
+        width: 22ch;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        flex-direction: column; /* Stack the text below the image */
+        align-items: center;
+    }
+
+    .container, .animation-container {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    .animation-text {
+        font-size: 0.8em;
+        width: 18ch;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 0.8em;
+    }
+
+    .animation-text {
+        font-size: 0.7em;
+        width: 15ch;
+    }
+}

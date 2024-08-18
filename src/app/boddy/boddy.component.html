@@ -1,0 +1,13 @@
+<div class="slideshow-container">
+    <ul class="slideshow">
+        <li [class.active]="slideIndex === 0">
+            <span class="slide-image" style="background-image: url('assets/images/poster.jfif');"></span>
+        </li>
+        <li [class.active]="slideIndex === 1">
+            <span class="slide-image" style="background-image: url('assets/images/poster.png');"></span>
+        </li>
+    </ul>
+    <!-- Navigation buttons -->
+    <button class="w3-button w3-display-left" (click)="previousSlide()">&#10094;</button>
+    <button class="w3-button w3-display-right" (click)="nextSlide()">&#10095;</button>
+</div>

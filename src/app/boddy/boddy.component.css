@@ -1,0 +1,95 @@
+.slideshow {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    height: 60vh; /* Use a viewport height for responsiveness */
+    width: 100%;
+}
+
+.slideshow li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow li.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+    background-size: cover; /* Cover ensures the image fills the container while maintaining its aspect ratio */
+    border-radius: 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+/* Navigation button styles */
+.w3-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(18, 18, 18);
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Adjust padding for better responsiveness */
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.w3-button:hover {
+    color: rgb(174, 0, 255);
+}
+
+.w3-display-left {
+    left: 10px; /* Adjusted for better spacing */
+}
+
+.w3-display-right {
+    right: 10px; /* Adjusted for better spacing */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .slideshow {
+        height: 50vh; /* Adjust height for tablets */
+    }
+
+    .w3-button {
+        padding: 5px; /* Reduce padding for smaller screens */
+        font-size: 16px; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow {
+        height: 40vh; /* Adjust height for mobile phones */
+    }
+
+    .w3-button {
+        padding: 5px; /* Reduce padding further */
+        font-size: 14px; /* Even smaller font size */
+    }
+}
+@media (max-width: 768px) {
+    .slide-image {
+        background-size: contain; /* On smaller screens, contain ensures the whole image is visible */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide-image {
+        background-size: contain; /* Ensures the image fits within the smaller screen */
+    }
+}
