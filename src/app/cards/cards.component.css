@@ -28,7 +28,8 @@ body {
 
 .card {
   perspective: 1000px;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 460px;
   margin: 20px;
   border: 1px solid #ddd;
@@ -100,14 +101,42 @@ body {
   margin-left: 90px;
 }
 
+@media (max-width: 1200px) {
+  .card-container {
+      gap: 15px;
+  }
+
+  .card {
+      width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+      width: 48%;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
       width: 100%;
       max-width: 400px;
   }
+
+  .card-body {
+      padding: 12px;
+  }
+
+  .card-title {
+      font-size: 1.1rem;
+  }
+
+  .btn {
+      padding: 8px 16px;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .header {
       font-size: 20px;
   }
@@ -137,5 +166,18 @@ body {
   .card-back a {
       margin-left: 0;
   }
+}
 
+@media (max-width: 400px) {
+  .card {
+      height: 350px;
+  }
+
+  .card-title {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      padding: 6px 12px;
+  }
 }
