@@ -1,0 +1,23 @@
+{
+    "builds": [
+      {
+        "src": "angular.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dist/your-project-name"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "build": {
+      "env": {
+        "EXTERNAL_DEPENDENCIES": "@angular/fire"
+      }
+    }
+  }
+  
