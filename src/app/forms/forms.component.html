@@ -1,5 +1,4 @@
-<h1>{{message}}</h1>
-<div class="container">
+<div class="container" [ngClass]="{'blur': showSuccessMessage}">
   <div class="left">
     <div class="header">
       <h2 class="animation a1">Welcome Back</h2>
@@ -22,3 +21,14 @@
   </div>
   <div class="right" [style.backgroundImage]="getBackgroundImageUrl(id)"></div>
 </div>
+
+<div *ngIf="showSuccessMessage" class="success-overlay">
+  <div class="modal-content">
+    <div class="giphy-container">
+      <iframe src="https://giphy.com/embed/zaqclXyLz3Uoo" frameborder="0" class="giphy-embed" allowfullscreen ></iframe>
+    </div>
+    <p>Registration Successful! Stay tuned on WhatsApp :)</p>
+  </div>
+</div>
+
+

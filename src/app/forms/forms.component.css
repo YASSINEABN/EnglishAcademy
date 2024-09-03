@@ -3,10 +3,29 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+.container.blur {
+  filter: blur(5px);
+}
+
 .container {
   display: flex;
   height: 100vh;
 }
+
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 
 .left {
   overflow: hidden;
@@ -139,4 +158,55 @@ body {
     padding: 20px 40px;
     width: 600px;
   }
+}
+.container.blur {
+  filter: blur(5px);
+}
+
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.success-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+.giphy-container {
+  width: 100%;
+ /* 16:9 aspect ratio */
+  position: relative;
+ 
+}
+
+.giphy-container iframe {
+
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

@@ -16,6 +16,7 @@ import { DataService } from '../services/data.service';
 export class FormsComponent {
   id:string|null=""
   message:string|null=""
+  showSuccessMessage = false;
   constructor(public dataService:DataService,private route: ActivatedRoute,private router: Router) {
     
   }
@@ -31,7 +32,12 @@ export class FormsComponent {
     if(form.valid)
     {
       this.dataService.addColec(this.firstName,this.secondName,this.telephone,this.age,this.id ? this.id:"NULL"); 
-     this.router.navigate(['']);
+      this.showSuccessMessage = true;
+
+      setTimeout(() => {
+        this.showSuccessMessage = false;
+        this.router.navigate(['']); // Specify your desired path
+      }, 5000); // 2 seconds delay
     }
   }
   getBackgroundImageUrl(id: string | null): string {
