@@ -35,7 +35,7 @@ export class FormsComponent {
     }
   }
   getBackgroundImageUrl(id: string | null): string {
-    const imageId = id ? id.toUpperCase() : 'DEFAULT';
-    return `url('assets/images/${imageId.toUpperCase()}.jfif')`;;
+    const imageId = id ? id : 'DEFAULT';
+    return `url('assets/images/${imageId}.jpg')`;;
   }
 }
