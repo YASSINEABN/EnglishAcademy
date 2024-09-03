@@ -1,11 +1,11 @@
-<!-- app.component.html -->
-
-
-<app-navbar></app-navbar>
-<app-boddy></app-boddy>
-<app-cards></app-cards>
-<app-reservation></app-reservation>
-<app-contact></app-contact>
-<app-footer></app-footer>
-
-<router-outlet />
+<ng-container *ngIf="!isRegisterPage">
+    <app-navbar></app-navbar>
+  <app-boddy></app-boddy>
+  <app-cards></app-cards> 
+    <app-reservation></app-reservation> 
+     <app-contact></app-contact>
+    <app-footer></app-footer> 
+  </ng-container>
+  
+  <router-outlet></router-outlet>
+  

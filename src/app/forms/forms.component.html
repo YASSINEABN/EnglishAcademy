@@ -1,0 +1,24 @@
+<h1>{{message}}</h1>
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome Back</h2>
+      <h4 class="animation a2">Fill The Form please</h4>
+    </div>
+    <form #form="ngForm" (ngSubmit)="save(form)" novalidate>
+      <div class="form">
+        <input type="text" class="form-field animation a3" placeholder="Entrer votre nom"
+               [(ngModel)]="firstName" name="firstName" required #firstNameField="ngModel">
+        <input type="email" class="form-field animation a3" placeholder="Votre Prenom"
+               [(ngModel)]="secondName" name="secondName" required #secondNameField="ngModel">
+        <input type="number" class="form-field animation a3" placeholder="your age"
+               [(ngModel)]="age" name="age" required #ageField="ngModel">
+        <input type="tel" class="form-field animation a4" placeholder="N telephone"
+               [(ngModel)]="telephone" name="telephone" required #telephoneField="ngModel">
+
+        <button class="animation a6" type="submit" [disabled]="!form.valid">REGISTER</button>
+      </div>
+    </form>
+  </div>
+  <div class="right" [style.backgroundImage]="getBackgroundImageUrl(id)"></div>
+</div>

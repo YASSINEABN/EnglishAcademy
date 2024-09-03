@@ -18,4 +18,8 @@ export class CardsComponent {
     this.dataService.setData(a);
     this.router.navigate(['/new-page']);
   }
+  go(b:string)
+  {
+    this.router.navigate(['/register',b]);
+  }
 }
