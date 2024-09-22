@@ -4,10 +4,7 @@
     padding: 0;
     overflow: hidden;
     position: relative;
-    height: 75
-    
-    
-    vh; /* Use a viewport height for responsiveness */
+    height: 70vh; /* Use a viewport height for responsiveness */
     width: 100%;
 }
 
